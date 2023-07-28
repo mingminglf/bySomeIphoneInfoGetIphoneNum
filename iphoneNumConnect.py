@@ -1,3 +1,4 @@
+#手机号码类似136**********80
 str1="136"
 str2="80"
 import requests
@@ -14,12 +15,12 @@ lens=11-len(str1+str2)
 size=0
 for i in range(10**lens):
 
-    # print(str(i).zfill(6))
+    
     phone=(str1+str(i).zfill(6)+str2)
     if p.find(phone)['city']=='湖南':
         size+=1
         print(phone)
-    # print(p.find(phone)['city']=='周口')
+    
 print("总数"+str(size))
 
 
